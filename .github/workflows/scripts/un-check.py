@@ -13,10 +13,10 @@ PORT        = int(os.getenv("UN_PORT", "563"))
 USER        = os.getenv("UN_USERNAME")
 PASS        = os.getenv("UN_PASSWORD")
 GROUP       = "alt.binaries.pictures"
-SLUG        = "unet"                                 # must match your .upptimerc.yml slug
+SLUG        = "download-server"                                 # must match your .upptimerc.yml slug
 OUT         = f"history/{SLUG}.yml"
 VALID_TAG   = "nntp"                                 # our “marker” label
-SITE_NAME   = "Usenet Server"
+SITE_NAME   = "Download Server"
 SITE_URL    = f"nntps://{SERVER}"
 # GitHub API setup
 GITHUB_TOKEN      = os.getenv("GITHUB_TOKEN")
@@ -187,6 +187,6 @@ except Exception as e:
     print("⚠️ Issue handling error:", e)
 
 # ─── 5) EXIT ──────────────────────────────────────────────────────────────
-# Always exit 0 so the workflow can commit history/unet.yml & continue.
+# Always exit 0 so the workflow can commit history/download-server.yml & continue.
 print(f"✅ Completed NNTP check: {status} – {detail}")
 sys.exit(0)
