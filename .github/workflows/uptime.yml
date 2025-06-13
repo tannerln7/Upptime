@@ -51,7 +51,7 @@ jobs:
           UN_PORT:           ${{ secrets.UN_PORT }}
           UN_USERNAME:       ${{ secrets.UN_USERNAME }}
           UN_PASSWORD:       ${{ secrets.UN_PASSWORD }}
-        run: python3 .github/scripts/un-check.py
+        run: python3 .github/workflows/scripts/un-check.py
       - name: Commit history file
         run: |
           git config user.name  "Upptime Bot"
