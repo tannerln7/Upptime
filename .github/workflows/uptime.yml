@@ -41,37 +41,22 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-
       - name: Install Python deps
-        run: python3 -m pip install pyyaml pynntp
-
-      - name: Run NNTP site fix
+        run: python3 -m pip install pyyaml pynntp requests
+      - name: Run NNTP check & issue cleanup
         env:
-          UN_SERVER:    ${{ secrets.UN_SERVER }}
-          UN_PORT:      ${{ secrets.UN_PORT }}
-          UN_USERNAME:  ${{ secrets.UN_USERNAME }}
-          UN_PASSWORD:  ${{ secrets.UN_PASSWORD }}
-        run: python3 .github/workflows/scripts/un-check.py
-
-      - name: Commit corrected history with real metrics
+          GITHUB_TOKEN:     ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY:${{ github.repository }}
+          UN_SERVER:        ${{ secrets.UN_SERVER }}
+          UN_PORT:          ${{ secrets.UN_PORT }}
+          UN_USERNAME:      ${{ secrets.UN_USERNAME }}
+          UN_PASSWORD:      ${{ secrets.UN_PASSWORD }}
+        run: python3 .github/scripts/nntp_check.py
+      - name: Commit history file
         run: |
-          # parse out the fields from the YAML
-          STATUS=$(grep '^status:' history/unet.yml | awk '{print $2}')
-          CODE=$(grep '^code:' history/unet.yml | awk '{print $2}')
-          RT=$(grep '^responseTime:' history/unet.yml | awk '{print $2}')
-
-          # pick the right emoji
-          if   [ "$STATUS" = "up" ];       then EMOJI="🟩"
-          elif [ "$STATUS" = "degraded" ]; then EMOJI="🟨"
-          else                               EMOJI="🟥"
-          fi
-
-          # build your commit message
-          MSG="$EMOJI Usenet Server is $STATUS ($CODE in $RT ms) [skip ci] [upptime]"
-
-          # commit it
           git config user.name  "Upptime Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add history/unet.yml
-          git commit -m "$MSG" || echo "✅ No changes to commit"
+          git commit -m "🟩 Usenet Server is $([[ $(grep '^status:' history/unet.yml | awk '{print $2}') == 'up' ]] && echo up || echo down) ($([[ $(grep '^code:' history/unet.yml | awk '{print $2}') ]] in $(grep '^responseTime:' history/unet.yml | awk '{print $2}') ms) [skip ci] [upptime]" \
+            || echo "No changes"
           git push
