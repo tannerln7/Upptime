@@ -2,27 +2,27 @@
   {
     "name": "Plex",
     "url": "$PLEX",
-    "icon": "https://icons.duckduckgo.com/ip3/null.ico",
+    "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/plex.png",
     "slug": "plex",
     "status": "down",
-    "uptime": "0.00%",
-    "uptimeDay": "0.00%",
-    "uptimeWeek": "0.00%",
-    "uptimeMonth": "0.00%",
-    "uptimeYear": "0.00%",
+    "uptime": "0.01%",
+    "uptimeDay": "0.01%",
+    "uptimeWeek": "0.01%",
+    "uptimeMonth": "0.01%",
+    "uptimeYear": "0.01%",
     "time": 96,
     "timeDay": 96,
     "timeWeek": 96,
     "timeMonth": 96,
     "timeYear": 96,
     "dailyMinutesDown": {
-      "2025-06-13": 28
+      "2025-06-13": 52
     }
   },
   {
     "name": "Overseer",
     "url": "$OVERSEERR",
-    "icon": "https://icons.duckduckgo.com/ip3/null.ico",
+    "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/overseerr.png",
     "slug": "overseer",
     "status": "down",
     "uptime": "0.00%",
@@ -36,33 +36,33 @@
     "timeMonth": 57,
     "timeYear": 57,
     "dailyMinutesDown": {
-      "2025-06-13": 28
+      "2025-06-13": 52
     }
   },
   {
     "name": "Episodes API",
     "url": "$SONARR",
-    "icon": "https://icons.duckduckgo.com/ip3/null.ico",
+    "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/sonarr.png",
     "slug": "episodes-api",
     "status": "down",
-    "uptime": "0.03%",
-    "uptimeDay": "0.03%",
-    "uptimeWeek": "0.03%",
-    "uptimeMonth": "0.03%",
-    "uptimeYear": "0.03%",
+    "uptime": "0.01%",
+    "uptimeDay": "0.01%",
+    "uptimeWeek": "0.01%",
+    "uptimeMonth": "0.01%",
+    "uptimeYear": "0.01%",
     "time": 77,
     "timeDay": 77,
     "timeWeek": 77,
     "timeMonth": 77,
     "timeYear": 77,
     "dailyMinutesDown": {
-      "2025-06-13": 28
+      "2025-06-13": 52
     }
   },
   {
     "name": "Movie API",
     "url": "$RADARR",
-    "icon": "https://icons.duckduckgo.com/ip3/null.ico",
+    "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/radarr.png",
     "slug": "movie-api",
     "status": "down",
     "uptime": "0.00%",
@@ -76,45 +76,87 @@
     "timeMonth": 73,
     "timeYear": 73,
     "dailyMinutesDown": {
-      "2025-06-13": 28
+      "2025-06-13": 52
     }
   },
   {
     "name": "Download Client",
     "url": "$NZBGET",
-    "icon": "https://icons.duckduckgo.com/ip3/null.ico",
+    "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/download_client.png",
     "slug": "download-client",
     "status": "down",
-    "uptime": "0.03%",
-    "uptimeDay": "0.03%",
-    "uptimeWeek": "0.03%",
-    "uptimeMonth": "0.03%",
-    "uptimeYear": "0.03%",
+    "uptime": "0.02%",
+    "uptimeDay": "0.02%",
+    "uptimeWeek": "0.02%",
+    "uptimeMonth": "0.02%",
+    "uptimeYear": "0.02%",
     "time": 80,
     "timeDay": 80,
     "timeWeek": 80,
     "timeMonth": 80,
     "timeYear": 80,
     "dailyMinutesDown": {
-      "2025-06-13": 28
+      "2025-06-13": 52
     }
   },
   {
     "name": "Download Server",
     "url": "$DOWNLOAD_SERVER",
-    "icon": "https://icons.duckduckgo.com/ip3/null.ico",
+    "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/download_server.png",
     "slug": "download-server",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "99.16%",
+    "uptimeDay": "99.16%",
+    "uptimeWeek": "99.16%",
+    "uptimeMonth": "99.16%",
+    "uptimeYear": "99.16%",
     "time": 1192,
     "timeDay": 1192,
     "timeWeek": 1192,
     "timeMonth": 1192,
     "timeYear": 1192,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2025-06-13": 0
+    }
+  },
+  {
+    "name": "Authentication Server",
+    "url": "$AUTH",
+    "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/auth.png",
+    "slug": "authentication-server",
+    "status": "down",
+    "uptime": "5.86%",
+    "uptimeDay": "5.86%",
+    "uptimeWeek": "5.86%",
+    "uptimeMonth": "5.86%",
+    "uptimeYear": "5.86%",
+    "time": 336,
+    "timeDay": 336,
+    "timeWeek": 336,
+    "timeMonth": 336,
+    "timeYear": 336,
+    "dailyMinutesDown": {
+      "2025-06-13": 0
+    }
+  },
+  {
+    "name": "Automation Server",
+    "url": "$HA",
+    "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/ha.png",
+    "slug": "automation-server",
+    "status": "down",
+    "uptime": "0.00%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "0.00%",
+    "uptimeMonth": "0.00%",
+    "uptimeYear": "0.00%",
+    "time": 262,
+    "timeDay": 262,
+    "timeWeek": 262,
+    "timeMonth": 262,
+    "timeYear": 262,
+    "dailyMinutesDown": {
+      "2025-06-13": 0
+    }
   }
 ]
