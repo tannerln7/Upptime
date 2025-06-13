@@ -1,7 +1,7 @@
-url: https://example.com
+url: nntps://news.usenetserver.com
 status: up
 code: 200
-responseTime: 96
-lastUpdated: 2025-06-13T21:09:02.488Z
-startTime: 2025-06-13T20:57:54.698Z
+responseTime: 523
+lastUpdated: '2025-06-13T21:09:17.762449'
+startTime: '2025-06-13T21:09:17.237494'
 generator: Upptime <https://github.com/upptime/upptime>
