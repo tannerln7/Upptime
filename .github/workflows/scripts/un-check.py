@@ -1,22 +1,23 @@
 #!/usr/bin/env python3
-import os, ssl, sys, nntplib, socket, yaml, time
+import os, sys, time, yaml
 from datetime import datetime
+from nntp import NNTPClient, NNTPError  # from pynntp
 
-# ── CONFIG ────────────────────────────────────────────────────
+# ─── CONFIG ─────────────────────────────────────────────────────
 SERVER = os.getenv("UN_SERVER")
-PORT   = int(os.getenv("UN_PORT"))
+PORT   = int(os.getenv("UN_PORT", "563"))
 USER   = os.getenv("UN_USERNAME")
 PASS   = os.getenv("UN_PASSWORD")
 GROUP  = "alt.binaries.pictures"
-SLUG   = "unet"
+SLUG   = "unet"                           # must match your .upptimerc.yml slug
 OUT    = f"history/{SLUG}.yml"
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 
 if not all([SERVER, USER, PASS]):
-    print("❌ Missing NNTP credentials")
+    print("❌ Missing NNTP credentials (UN_SERVER, UN_USERNAME, UN_PASSWORD)")
     sys.exit(1)
 
-# Load previous startTime if it exists
+# Preserve existing startTime if we were already down
 start_time = datetime.utcnow()
 try:
     with open(OUT) as f:
@@ -26,27 +27,33 @@ try:
 except Exception:
     pass
 
-# Perform the NNTP SSL + login + group query
+# Perform the NNTP SSL + login + GROUP query
 start_perf = time.perf_counter()
 try:
-    ctx = ssl.create_default_context()
-    with nntplib.NNTP_SSL(SERVER, PORT, user=USER, password=PASS,
-                          ssl_context=ctx, timeout=10) as s:
-        resp, count, first, last, name = s.group(GROUP)
+    client = NNTPClient(
+        host=SERVER,
+        port=PORT,
+        user=USER,
+        password=PASS,
+        use_ssl=True,
+    )
+    # at this point we’re connected & authenticated
+    resp, count, first, last, name = client.group(GROUP)
     status = "up"
     code   = 200
     detail = f"Group {name} has {count} articles"
-except Exception as e:
+    client.quit()
+except (NNTPError, Exception) as e:
     status = "down"
     code   = 0
     detail = str(e)
 finally:
     elapsed = time.perf_counter() - start_perf
-    response_time = int(elapsed * 1000)
+    response_time = int(elapsed * 1000)  # in ms
 
 now = datetime.utcnow().isoformat()
 
-# Build the exact same structure Upptime expects:
+# Build the Upptime-compatible history entry
 data = {
     "url":           f"nntps://{SERVER}",
     "status":        status,
@@ -57,15 +64,13 @@ data = {
     "generator":     "Upptime <https://github.com/upptime/upptime>",
 }
 
-# Write history/usenet.yml
 os.makedirs("history", exist_ok=True)
 with open(OUT, "w") as f:
     yaml.safe_dump(data, f, sort_keys=False)
 
-# Exit non-zero to mark the job failed if “down”
 if status != "up":
-    print("❌ Usenet check failed:", detail)
+    print("❌ check failed:", detail)
     sys.exit(1)
-else:
-    print("✅ Usenet is up –", detail)
-    sys.exit(0)
+
+print("✅ Server is up –", detail)
+sys.exit(0)
