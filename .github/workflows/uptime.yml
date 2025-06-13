@@ -45,7 +45,7 @@ jobs:
         run: python3 -m pip install pyyaml pynntp requests
       - name: Run NNTP check & issue cleanup
         env:
-          GITHUB_TOKEN:      ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN:      ${{ secrets.GH_PAT }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           UN_SERVER:         ${{ secrets.UN_SERVER }}
           UN_PORT:           ${{ secrets.UN_PORT }}
