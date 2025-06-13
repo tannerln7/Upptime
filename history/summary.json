@@ -91,22 +91,20 @@
   },
   {
     "name": "Download Server",
-    "url": "nntps://$UN_SERVER",
-    "icon": "https://icons.duckduckgo.com/ip3/$un_server.ico",
-    "slug": "unet",
-    "status": "down",
-    "uptime": "99.38%",
-    "uptimeDay": "99.38%",
-    "uptimeWeek": "99.38%",
-    "uptimeMonth": "99.38%",
-    "uptimeYear": "99.38%",
-    "time": 1214,
-    "timeDay": 1214,
-    "timeWeek": 1214,
-    "timeMonth": 1214,
-    "timeYear": 1214,
-    "dailyMinutesDown": {
-      "2025-06-13": 0
-    }
+    "url": "https://example.com",
+    "icon": "https://icons.duckduckgo.com/ip3/example.com.ico",
+    "slug": "download-server",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 263,
+    "timeDay": 263,
+    "timeWeek": 263,
+    "timeMonth": 263,
+    "timeYear": 263,
+    "dailyMinutesDown": {}
   }
 ]
