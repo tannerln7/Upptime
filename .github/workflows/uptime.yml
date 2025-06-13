@@ -54,9 +54,25 @@ jobs:
         run: python3 .github/workflows/scripts/un-check.py
       - name: Commit history file
         run: |
+          # extract fields
+          STATUS=$(grep '^status:' history/unet.yml | awk '{print $2}')
+          CODE=$(grep '^code:' history/unet.yml | awk '{print $2}')
+          RT=$(grep '^responseTime:' history/unet.yml | awk '{print $2}')
+      
+          # pick emoji
+          if   [ "$STATUS" = "up" ];       then EMOJI="🟩"
+          elif [ "$STATUS" = "degraded" ]; then EMOJI="🟨"
+          else                               EMOJI="🟥"
+          fi
+      
+          # compose the Upptime‐style message
+          MSG="$EMOJI Usenet Server is $STATUS ($CODE in $RT ms) [skip ci] [upptime]"
+      
+          # set Git identity
           git config user.name  "Upptime Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      
+          # commit & push
           git add history/unet.yml
-          git commit -m "🟩 Usenet Server is $([[ $(grep '^status:' history/unet.yml | awk '{print $2}') == 'up' ]] && echo up || echo down) ($([[ $(grep '^code:' history/unet.yml | awk '{print $2}') ]] in $(grep '^responseTime:' history/unet.yml | awk '{print $2}') ms) [skip ci] [upptime]" \
-            || echo "No changes"
+          git commit -m "$MSG" || echo "No changes to commit"
           git push
