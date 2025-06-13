@@ -1,7 +1,7 @@
-url: nntps://news.usenetserver.com
-status: up
-code: 200
-responseTime: 4378
-lastUpdated: '2025-06-13T18:57:57.454985'
-startTime: '2025-06-13T18:57:53.075013'
+url: nntps://$UN_SERVER
+status: down
+code: 0
+responseTime: 0
+lastUpdated: 2025-06-13T19:19:43.842Z
+startTime: 2025-06-13T18:57:53.075Z
 generator: Upptime <https://github.com/upptime/upptime>
