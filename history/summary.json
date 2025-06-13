@@ -5,18 +5,18 @@
     "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/plex.png",
     "slug": "plex",
     "status": "down",
-    "uptime": "0.01%",
-    "uptimeDay": "0.01%",
-    "uptimeWeek": "0.01%",
-    "uptimeMonth": "0.01%",
-    "uptimeYear": "0.01%",
+    "uptime": "0.00%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "0.00%",
+    "uptimeMonth": "0.00%",
+    "uptimeYear": "0.00%",
     "time": 93,
     "timeDay": 93,
     "timeWeek": 93,
     "timeMonth": 93,
     "timeYear": 93,
     "dailyMinutesDown": {
-      "2025-06-13": 111
+      "2025-06-13": 118
     }
   },
   {
@@ -36,7 +36,7 @@
     "timeMonth": 86,
     "timeYear": 86,
     "dailyMinutesDown": {
-      "2025-06-13": 111
+      "2025-06-13": 118
     }
   },
   {
@@ -56,7 +56,7 @@
     "timeMonth": 88,
     "timeYear": 88,
     "dailyMinutesDown": {
-      "2025-06-13": 111
+      "2025-06-13": 118
     }
   },
   {
@@ -76,7 +76,7 @@
     "timeMonth": 85,
     "timeYear": 85,
     "dailyMinutesDown": {
-      "2025-06-13": 111
+      "2025-06-13": 118
     }
   },
   {
@@ -96,7 +96,7 @@
     "timeMonth": 100,
     "timeYear": 100,
     "dailyMinutesDown": {
-      "2025-06-13": 111
+      "2025-06-13": 118
     }
   },
   {
@@ -134,7 +134,7 @@
     "timeMonth": 119,
     "timeYear": 119,
     "dailyMinutesDown": {
-      "2025-06-13": 59
+      "2025-06-13": 66
     }
   },
   {
@@ -154,7 +154,7 @@
     "timeMonth": 121,
     "timeYear": 121,
     "dailyMinutesDown": {
-      "2025-06-13": 59
+      "2025-06-13": 66
     }
   }
 ]
