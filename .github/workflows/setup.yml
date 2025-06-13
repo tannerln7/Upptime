@@ -33,9 +33,10 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GH_PAT || github.token }}
       - name: Update response time
-        uses: upptime/uptime-monitor@v1.40.1
+        uses: benc-uk/workflow-dispatch@v1
         with:
-          command: "response-time"
+          workflow: Uptime CI
+          token: ${{ secrets.GH_PAT || github.token }}
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
