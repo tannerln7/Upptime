@@ -53,10 +53,25 @@ jobs:
           UN_PASSWORD:  ${{ secrets.UN_PASSWORD }}
         run: python3 .github/workflows/scripts/un-check.py
 
-      - name: Commit history file
+      - name: Commit corrected history with real metrics
         run: |
+          # parse out the fields from the YAML
+          STATUS=$(grep '^status:' history/unet.yml | awk '{print $2}')
+          CODE=$(grep '^code:' history/unet.yml | awk '{print $2}')
+          RT=$(grep '^responseTime:' history/unet.yml | awk '{print $2}')
+
+          # pick the right emoji
+          if   [ "$STATUS" = "up" ];       then EMOJI="🟩"
+          elif [ "$STATUS" = "degraded" ]; then EMOJI="🟨"
+          else                               EMOJI="🟥"
+          fi
+
+          # build your commit message
+          MSG="$EMOJI Usenet Server is $STATUS ($CODE in $RT ms) [skip ci] [upptime]"
+
+          # commit it
           git config user.name  "Upptime Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add history/unet.yml
-          git commit -m ":memo: unet status update [skip ci]" || echo "No changes"
+          git commit -m "$MSG" || echo "✅ No changes to commit"
           git push
