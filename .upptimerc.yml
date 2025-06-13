@@ -6,18 +6,28 @@ sites:
   - name: Plex
     url: $PLEX
     icon: https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/plex.png
+    headers:
+      - $UPPTIME_KEY
   - name: Overseer
     url: $OVERSEERR
     icon: https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/overseerr.png
+    headers:
+      - $UPPTIME_KEY
   - name: Episodes API
     url: $SONARR
     icon: https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/sonarr.png
+    headers:
+      - $UPPTIME_KEY
   - name: Movie API
     url: $RADARR
     icon: https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/radarr.png
+    headers:
+      - $UPPTIME_KEY
   - name: Download Client
     url: $NZBGET
     icon: https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/download_client.png
+    headers:
+      - $UPPTIME_KEY
   - name: Download Server
     url:  $DOWNLOAD_SERVER
     icon: https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/download_server.png
@@ -25,9 +35,13 @@ sites:
   - name: Authentication Server
     url: $AUTH
     icon: https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/auth.png
+    headers:
+      - $UPPTIME_KEY
   - name: Automation Server
     url: $HA
     icon: https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/ha.png
+    headers:
+      - $UPPTIME_KEY
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
