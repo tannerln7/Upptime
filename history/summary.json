@@ -94,17 +94,19 @@
     "url": "https://news.iad.usenetserver.com",
     "icon": "https://icons.duckduckgo.com/ip3/news.iad.usenetserver.com.ico",
     "slug": "download-server",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "99.40%",
+    "uptimeDay": "99.40%",
+    "uptimeWeek": "99.40%",
+    "uptimeMonth": "99.40%",
+    "uptimeYear": "99.40%",
     "time": 557,
     "timeDay": 557,
     "timeWeek": 557,
     "timeMonth": 557,
     "timeYear": 557,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2025-06-13": 0
+    }
   }
 ]
