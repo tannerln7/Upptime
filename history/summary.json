@@ -94,19 +94,17 @@
     "url": "nntps://$UN_SERVER",
     "icon": "https://icons.duckduckgo.com/ip3/$un_server.ico",
     "slug": "unet",
-    "status": "down",
-    "uptime": "97.72%",
-    "uptimeDay": "97.72%",
-    "uptimeWeek": "97.72%",
-    "uptimeMonth": "97.72%",
-    "uptimeYear": "97.72%",
-    "time": 1216,
-    "timeDay": 1216,
-    "timeWeek": 1216,
-    "timeMonth": 1216,
-    "timeYear": 1216,
-    "dailyMinutesDown": {
-      "2025-06-13": 0
-    }
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 1214,
+    "timeDay": 1214,
+    "timeWeek": 1214,
+    "timeMonth": 1214,
+    "timeYear": 1214,
+    "dailyMinutesDown": {}
   }
 ]
