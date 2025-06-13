@@ -37,6 +37,13 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
+      - name: Check endpoint response time
+        uses: upptime/uptime-monitor@v1.40.1
+        with:
+          command: "response-time"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
