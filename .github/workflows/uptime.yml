@@ -55,9 +55,9 @@ jobs:
       - name: Commit history file
         run: |
           # extract fields
-          STATUS=$(grep '^status:' history/unet.yml | awk '{print $2}')
-          CODE=$(grep '^code:' history/unet.yml | awk '{print $2}')
-          RT=$(grep '^responseTime:' history/unet.yml | awk '{print $2}')
+          STATUS=$(grep '^status:' history/download-server.yml | awk '{print $2}')
+          CODE=$(grep '^code:' history/download-server.yml | awk '{print $2}')
+          RT=$(grep '^responseTime:' history/download-server.yml | awk '{print $2}')
       
           # pick emoji
           if   [ "$STATUS" = "up" ];       then EMOJI="🟩"
@@ -73,6 +73,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
       
           # commit & push
-          git add history/unet.yml
+          git add history/download-server.yml
           git commit -m "$MSG" || echo "No changes to commit"
           git push
