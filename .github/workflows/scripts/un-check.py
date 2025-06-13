@@ -98,20 +98,35 @@ def list_open_status_issues():
     return r.json()
 
 def delete_issue_via_graphql(node_id: str):
-    q = """
-    mutation($id: ID!) {
-      deleteIssue(input: {issueId: $id}) {
+    # GraphQL mutation must take an `$input` of type DeleteIssueInput!
+    query = """
+    mutation DeleteIssue($input: DeleteIssueInput!) {
+      deleteIssue(input: $input) {
         clientMutationId
+        repository {
+          name
+          owner {
+            login
+          }
+        }
       }
     }
     """
-    r = requests.post(
+    variables = {
+        "input": {
+            "issueId": node_id,
+            # you can pass a clientMutationId if you like, or omit it
+        }
+    }
+    resp = requests.post(
         "https://api.github.com/graphql",
         headers=HEADERS,
-        json={"query": q, "variables": {"id": node_id}},
+        json={"query": query, "variables": variables},
     )
-    r.raise_for_status()
-    print(f"🗑️ Deleted issue {node_id}")
+    resp.raise_for_status()
+    data = resp.json()
+    print(f"🗑️ deleteIssue response for node {node_id}:", data)
+    return data
 
 def close_and_lock_issue(num):
     """Close & lock issue #num."""
