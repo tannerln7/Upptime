@@ -97,11 +97,21 @@ def list_open_status_issues():
     r.raise_for_status()
     return r.json()
 
-def update_issue_labels(num, labels):
-    """Replace the labels on issue #num."""
-    url = f"{ISSUES_URL}/{num}"
-    r = requests.patch(url, headers=HEADERS, json={"labels": labels})
+def delete_issue_via_graphql(node_id: str):
+    q = """
+    mutation($id: ID!) {
+      deleteIssue(input: {issueId: $id}) {
+        clientMutationId
+      }
+    }
+    """
+    r = requests.post(
+        "https://api.github.com/graphql",
+        headers=HEADERS,
+        json={"query": q, "variables": {"id": node_id}},
+    )
     r.raise_for_status()
+    print(f"🗑️ Deleted issue {node_id}")
 
 def close_and_lock_issue(num):
     """Close & lock issue #num."""
@@ -122,9 +132,9 @@ try:
     for issue in all_issues:
         labels = [l["name"] for l in issue["labels"]]
         if VALID_TAG not in labels:
-            new_lbls = [l for l in labels if l != SLUG]
-            print(f"🗑️ Stripping default issue #{issue['number']}")
-            update_issue_labels(issue["number"], new_lbls)
+            # this is a default Upptime stub → delete it entirely
+            node_id = issue["node_id"]
+            delete_issue_via_graphql(node_id)
 
     # 4b) Fetch only our “valid” NNTP issues
     valid_issues = [
