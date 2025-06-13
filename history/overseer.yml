@@ -1,7 +1,7 @@
 url: $OVERSEERR
 status: down
-code: 0
-responseTime: 0
-lastUpdated: 2025-06-13T21:38:49.884Z
+code: 403
+responseTime: 66
+lastUpdated: 2025-06-13T21:50:03.328Z
 startTime: 2025-06-13T21:32:21.433Z
 generator: Upptime <https://github.com/upptime/upptime>
