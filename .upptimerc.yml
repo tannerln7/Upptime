@@ -17,8 +17,8 @@ sites:
     check: "tcp-ping"
     ipv6: true
   - name: Download Server
-    url:  nntps://$UN_SERVER
-    slug: unet
+    url:  https://example.com
+    slug: download-server
     enabled: false
 
 status-website:
