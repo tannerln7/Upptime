@@ -39,7 +39,17 @@ try:
         timeout=10,
     )
     # at this point we’re connected & authenticated
-    resp, count, first, last, name = client.group(GROUP)
+    group_info = client.group(GROUP)
+
+    if len(group_info) == 5:
+    # old‐style: (resp, count, first, last, name)
+        _, count, _, _, name = group_info
+    elif len(group_info) == 4:
+    # new‐style: (count, first, last, name)
+        count, first, last, name = group_info
+    else:
+        raise RuntimeError(f"Unexpected GROUP response: {group_info}")
+    
     status = "up"
     code   = 200
     detail = f"Group {name} has {count} articles"
