@@ -33,9 +33,10 @@ try:
     client = NNTPClient(
         host=SERVER,
         port=PORT,
-        user=USER,
+        username=USER,
         password=PASS,
         use_ssl=True,
+        timeout=10,
     )
     # at this point we’re connected & authenticated
     resp, count, first, last, name = client.group(GROUP)
