@@ -23,7 +23,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install Python deps
-        run: pip install pyyaml
+        run: python3 -m pip install pyyaml pynnt
 
       - name: Run NNTP check
         env:
