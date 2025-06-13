@@ -16,7 +16,7 @@
     "timeMonth": 96,
     "timeYear": 96,
     "dailyMinutesDown": {
-      "2025-06-13": 109
+      "2025-06-13": 111
     }
   },
   {
@@ -36,7 +36,7 @@
     "timeMonth": 91,
     "timeYear": 91,
     "dailyMinutesDown": {
-      "2025-06-13": 109
+      "2025-06-13": 111
     }
   },
   {
@@ -45,18 +45,18 @@
     "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/sonarr.png",
     "slug": "episodes-api",
     "status": "down",
-    "uptime": "0.01%",
-    "uptimeDay": "0.01%",
-    "uptimeWeek": "0.01%",
-    "uptimeMonth": "0.01%",
-    "uptimeYear": "0.01%",
+    "uptime": "0.00%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "0.00%",
+    "uptimeMonth": "0.00%",
+    "uptimeYear": "0.00%",
     "time": 90,
     "timeDay": 90,
     "timeWeek": 90,
     "timeMonth": 90,
     "timeYear": 90,
     "dailyMinutesDown": {
-      "2025-06-13": 108
+      "2025-06-13": 111
     }
   },
   {
@@ -76,7 +76,7 @@
     "timeMonth": 87,
     "timeYear": 87,
     "dailyMinutesDown": {
-      "2025-06-13": 108
+      "2025-06-13": 111
     }
   },
   {
@@ -96,7 +96,7 @@
     "timeMonth": 103,
     "timeYear": 103,
     "dailyMinutesDown": {
-      "2025-06-13": 108
+      "2025-06-13": 111
     }
   },
   {
@@ -104,18 +104,20 @@
     "url": "$DOWNLOAD_SERVER",
     "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/download_server.png",
     "slug": "download-server",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "98.01%",
+    "uptimeDay": "98.01%",
+    "uptimeWeek": "98.01%",
+    "uptimeMonth": "98.01%",
+    "uptimeYear": "98.01%",
     "time": 1073,
     "timeDay": 1073,
     "timeWeek": 1073,
     "timeMonth": 1073,
     "timeYear": 1073,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2025-06-13": 0
+    }
   },
   {
     "name": "Authentication Server",
@@ -123,18 +125,18 @@
     "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/auth.png",
     "slug": "authentication-server",
     "status": "down",
-    "uptime": "0.01%",
-    "uptimeDay": "0.01%",
-    "uptimeWeek": "0.01%",
-    "uptimeMonth": "0.01%",
-    "uptimeYear": "0.01%",
+    "uptime": "0.02%",
+    "uptimeDay": "0.02%",
+    "uptimeWeek": "0.02%",
+    "uptimeMonth": "0.02%",
+    "uptimeYear": "0.02%",
     "time": 128,
     "timeDay": 128,
     "timeWeek": 128,
     "timeMonth": 128,
     "timeYear": 128,
     "dailyMinutesDown": {
-      "2025-06-13": 57
+      "2025-06-13": 59
     }
   },
   {
@@ -154,7 +156,7 @@
     "timeMonth": 131,
     "timeYear": 131,
     "dailyMinutesDown": {
-      "2025-06-13": 57
+      "2025-06-13": 59
     }
   }
 ]
