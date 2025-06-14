@@ -16,7 +16,7 @@
     "timeMonth": 103,
     "timeYear": 103,
     "dailyMinutesDown": {
-      "2025-06-14": 23,
+      "2025-06-14": 113,
       "2025-06-13": 148
     }
   },
@@ -37,7 +37,7 @@
     "timeMonth": 102,
     "timeYear": 102,
     "dailyMinutesDown": {
-      "2025-06-14": 23,
+      "2025-06-14": 113,
       "2025-06-13": 148
     }
   },
@@ -58,7 +58,7 @@
     "timeMonth": 100,
     "timeYear": 100,
     "dailyMinutesDown": {
-      "2025-06-14": 23,
+      "2025-06-14": 113,
       "2025-06-13": 148
     }
   },
@@ -79,7 +79,7 @@
     "timeMonth": 100,
     "timeYear": 100,
     "dailyMinutesDown": {
-      "2025-06-14": 23,
+      "2025-06-14": 113,
       "2025-06-13": 148
     }
   },
@@ -100,7 +100,7 @@
     "timeMonth": 103,
     "timeYear": 103,
     "dailyMinutesDown": {
-      "2025-06-14": 23,
+      "2025-06-14": 113,
       "2025-06-13": 148
     }
   },
@@ -109,18 +109,20 @@
     "url": "$DOWNLOAD_SERVER",
     "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/download_server.png",
     "slug": "download-server",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "99.93%",
+    "uptimeDay": "99.93%",
+    "uptimeWeek": "99.93%",
+    "uptimeMonth": "99.93%",
+    "uptimeYear": "99.93%",
     "time": 1128,
     "timeDay": 1128,
     "timeWeek": 1128,
     "timeMonth": 1128,
     "timeYear": 1128,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2025-06-14": 0
+    }
   },
   {
     "name": "Authentication Server",
@@ -139,7 +141,7 @@
     "timeMonth": 124,
     "timeYear": 124,
     "dailyMinutesDown": {
-      "2025-06-14": 23,
+      "2025-06-14": 113,
       "2025-06-13": 96
     }
   },
@@ -160,7 +162,7 @@
     "timeMonth": 112,
     "timeYear": 112,
     "dailyMinutesDown": {
-      "2025-06-14": 23,
+      "2025-06-14": 113,
       "2025-06-13": 96
     }
   }
