@@ -35,6 +35,7 @@ jobs:
         with:
           command: "update"
         env:
+          UPPTIME_KEY: ${{ secrets.UPPTIME_KEY }}
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
       - name: Check endpoint response time
@@ -42,6 +43,7 @@ jobs:
         with:
           command: "response-time"
         env:
+          UPPTIME_KEY: ${{ secrets.UPPTIME_KEY }}
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
       - name: Set up Python
