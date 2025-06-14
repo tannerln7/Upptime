@@ -16,7 +16,8 @@
     "timeMonth": 96,
     "timeYear": 96,
     "dailyMinutesDown": {
-      "2025-06-13": 145
+      "2025-06-14": 5,
+      "2025-06-13": 148
     }
   },
   {
@@ -36,7 +37,8 @@
     "timeMonth": 93,
     "timeYear": 93,
     "dailyMinutesDown": {
-      "2025-06-13": 145
+      "2025-06-14": 5,
+      "2025-06-13": 148
     }
   },
   {
@@ -56,7 +58,8 @@
     "timeMonth": 93,
     "timeYear": 93,
     "dailyMinutesDown": {
-      "2025-06-13": 145
+      "2025-06-14": 5,
+      "2025-06-13": 148
     }
   },
   {
@@ -76,7 +79,8 @@
     "timeMonth": 93,
     "timeYear": 93,
     "dailyMinutesDown": {
-      "2025-06-13": 145
+      "2025-06-14": 5,
+      "2025-06-13": 148
     }
   },
   {
@@ -96,7 +100,8 @@
     "timeMonth": 103,
     "timeYear": 103,
     "dailyMinutesDown": {
-      "2025-06-13": 145
+      "2025-06-14": 5,
+      "2025-06-13": 148
     }
   },
   {
@@ -104,18 +109,20 @@
     "url": "$DOWNLOAD_SERVER",
     "icon": "https://github.com/tannerln7/Upptime/blob/f840a86b31c062036a625cbdd3aea94804382ff6/assets/download_server.png",
     "slug": "download-server",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "98.71%",
+    "uptimeDay": "98.71%",
+    "uptimeWeek": "98.71%",
+    "uptimeMonth": "98.71%",
+    "uptimeYear": "98.71%",
     "time": 1136,
     "timeDay": 1136,
     "timeWeek": 1136,
     "timeMonth": 1136,
     "timeYear": 1136,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2025-06-14": 0
+    }
   },
   {
     "name": "Authentication Server",
@@ -134,7 +141,8 @@
     "timeMonth": 117,
     "timeYear": 117,
     "dailyMinutesDown": {
-      "2025-06-13": 93
+      "2025-06-14": 5,
+      "2025-06-13": 96
     }
   },
   {
@@ -154,7 +162,8 @@
     "timeMonth": 109,
     "timeYear": 109,
     "dailyMinutesDown": {
-      "2025-06-13": 93
+      "2025-06-14": 5,
+      "2025-06-13": 96
     }
   }
 ]
